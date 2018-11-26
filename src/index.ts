@@ -27,8 +27,6 @@ var tdtVecLayer = new TileLayer(
     "https://t{s}.tianditu.gov.cn/DataServer?T=vec_w&x={x}&y={y}&l={z}",
     {
         subdomains: ['0', '1', '2', '3', '4', '5', '6', '7'],
-
-
     }
 );
 
@@ -40,7 +38,7 @@ window.navigator.geolocation.getCurrentPosition(
         // console.log('success');
         // alert(`${a.coords.latitude} ${a.coords.longitude}`);
         console.log(a);
-        map.flyTo([a.coords.latitude, a.coords.longitude]);
+        map.flyTo([a.coords.latitude, a.coords.longitude], 16);
 
     },
     (b) => {
